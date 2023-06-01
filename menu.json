@@ -1,0 +1,35 @@
+{
+  "enableTranslates": true,
+  "enableMainHeader": true,
+  "menuItems": [
+    
+    {
+      "es": {
+        "title": "Volver a bogotadc.travel",
+        "link": "http://bogotadc.travel/"
+      },
+      "en": {
+        "title": "Volver a bogotadc.travel",
+        "link": "http://bogotadc.travel/"
+      },
+      "pt": {
+        "title": "Volver a bogotadc.travel",
+        "link": "http://bogotadc.travel/"
+      }
+    },
+    {
+      "es": {
+        "title": "Buscar hoteles",
+        "link": "http://bogotadc.travel/es/hoteles"
+      },
+      "en": {
+        "title": "Buscar hoteles",
+        "link": "http://bogotadc.travel/es/hoteles"
+      },
+      "pt": {
+        "title": "Buscar hoteles",
+        "link": "http://bogotadc.travel/es/hoteles"
+      }
+    }
+  ]
+}

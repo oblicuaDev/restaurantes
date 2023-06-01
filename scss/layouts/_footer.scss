@@ -1,0 +1,110 @@
+footer {
+  background-repeat: no-repeat;
+  position: relative;
+  background-attachment: fixed;
+  padding: 30px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  background-color: #000;
+  margin: 0 auto;
+  @media screen and (max-width: 1023px) {
+    background-attachment: scroll;
+  }
+  .container {
+    color: #fff;
+    .logo_footer {
+      margin-bottom: 50px;
+      object-fit: contain;
+      width: 200px;
+      @media screen and (max-width: 1023px) {
+        width: 120px;
+      }
+    }
+    nav {
+      font-family: serif;
+      font-size: 23px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      h3 {
+        font-family: "MuseoSans-900";
+        font-size: 2.3rem;
+        margin-bottom: 20px;
+        text-shadow: 4px 4px 7px rgb(0 0 0 / 75%);
+      }
+      ul {
+        margin: 0 0 30px;
+        li {
+          margin: 5px 0;
+          a {
+            font-family: "MuseoSans-500";
+            line-height: 23px;
+            text-shadow: 4px 4px 7px rgb(0 0 0 / 75%);
+            font-size: 1.5rem;
+            color: #fff;
+            text-transform: capitalize;
+            border-bottom: 1px solid transparent;
+            @media screen and (max-width: 1023px) {
+              font-size: 1.4rem;
+            }
+            &:hover {
+              border-bottom: 1px solid #fff;
+            }
+          }
+        }
+      }
+    }
+    .social {
+      h6 {
+        font-size: 1.8rem;
+        color: #fff;
+        font-family: "MuseoSans-500";
+        margin-bottom: 15px;
+        text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.75);
+      }
+      ul {
+        display: flex;
+        margin-bottom: 30px;
+        li {
+          margin: 0 12px 0 0;
+          a {
+            text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.75);
+            align-items: center;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            height: 40px;
+            justify-content: center;
+            width: 40px;
+            img {
+              height: 20px;
+              object-fit: contain;
+              width: 20px;
+              &.active {
+                display: block;
+              }
+              &.inactive {
+                display: none;
+              }
+            }
+          }
+          &:hover {
+            a {
+              background-color: #000;
+              img {
+                &.active {
+                  display: none;
+                }
+                &.inactive {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
