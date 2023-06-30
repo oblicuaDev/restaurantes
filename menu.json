@@ -2,7 +2,6 @@
   "enableTranslates": true,
   "enableMainHeader": true,
   "menuItems": [
-    
     {
       "es": {
         "title": "Volver a bogotadc.travel",
@@ -19,16 +18,16 @@
     },
     {
       "es": {
-        "title": "Buscar hoteles",
-        "link": "http://bogotadc.travel/es/hoteles"
+        "title": "Buscar restaurantes",
+        "link": "http://bogotadc.travel/es/restaurantes"
       },
       "en": {
-        "title": "Buscar hoteles",
-        "link": "http://bogotadc.travel/es/hoteles"
+        "title": "Buscar restaurantes",
+        "link": "http://bogotadc.travel/es/restaurantes"
       },
       "pt": {
-        "title": "Buscar hoteles",
-        "link": "http://bogotadc.travel/es/hoteles"
+        "title": "Buscar restaurantes",
+        "link": "http://bogotadc.travel/es/restaurantes"
       }
     }
   ]

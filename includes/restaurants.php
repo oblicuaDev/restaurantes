@@ -42,9 +42,9 @@ class Restaurants extends bogota
         }
         return $gnrl;
     }
-    public function getRestaurants($zones,$id="all")
+    public function getRestaurants($categoria_restaurantes="all",$test_zona="all",$zonas_gastronomicas="all",$rangos_de_precio="all",$id="all")
     {
-       $querystr = "webrestaurants/".$id."/".$zones;
+       $querystr = "webrestaurants/".$id."/".$test_zona."/".$rangos_de_precio."/".$zonas_gastronomicas."/".$categoria_restaurantes;
         $firstqueryfilter = true;
 
         //echo $querystr;

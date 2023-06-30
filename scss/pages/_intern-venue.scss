@@ -30,7 +30,6 @@
   }
 }
 
-
 .internVenue-body .banner-internVenue h1,
 .internprovider-body .banner-internVenue h1 {
   font-family: "MuseoSans-700";
@@ -111,7 +110,6 @@
   width: 36px;
   margin-right: 12px;
 }
-
 
 .internVenue-body .banner-internVenue .info-container .address span,
 .internVenue-body .banner-internVenue .info-container .phone span,
@@ -626,8 +624,6 @@
   }
 }
 
-
-
 .internVenue-body .gallery.others img,
 .internprovider-body .gallery.others img {
   height: 100%;
@@ -953,7 +949,6 @@
   color: #fff;
 }
 
-
 .internVenue-body .images h2,
 .internprovider-body .images h2 {
   margin: 90px 0 0;
@@ -979,7 +974,7 @@
     background-repeat: no-repeat;
     background-position: bottom;
     position: relative;
- 
+
     h1 {
       font-family: "MuseoSans-700";
       font-size: 60px;
@@ -1286,7 +1281,6 @@
       border-radius: 0;
     }
 
-  
     img {
       height: 100%;
       object-fit: cover;
@@ -1376,136 +1370,136 @@
     li {
       a {
         box-shadow: inset rgba($color: #444, $alpha: 0.2) 0 0 20px;
-      box-sizing: border-box;
-      border-radius: 15px;
-      color: #fff;
-      margin: calc(var(--marginelements) / 2);
-      overflow: hidden;
-      width: 100%;
-      background: #FFF;
-      height: 100%;
-      &:hover {
-        cursor: pointer;
-        transition: all 0.3s;
-        figure {
-          background-position: center top;
+        box-sizing: border-box;
+        border-radius: 15px;
+        color: #fff;
+        margin: calc(var(--marginelements) / 2);
+        overflow: hidden;
+        width: 100%;
+        background: #fff;
+        height: 100%;
+        &:hover {
           cursor: pointer;
-          height: 100%;
-          transition: all 0.3s ease-out;
-        }
-        .data {
-          * {
-            color: #fff;
+          transition: all 0.3s;
+          figure {
+            background-position: center top;
+            cursor: pointer;
+            height: 100%;
+            transition: all 0.3s ease-out;
           }
-          .stars {
-            color: #FFF;
-          }
-        }
-      }
-      figure {
-        transition: all 0.3s ease-out;
-        min-height: 150px;
-        height: 100%;
-      }
-      .flex {
-        align-items: normal;
-        height: 100%;
-      }
-      .data {
-        padding: 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        .stars {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          font-size: 1.8rem;
-          color: #649ac0;
-          font-weight: bold;
-          img {
-            width: 25px;
-          }
-        }
-
-        .colors {
-          margin: 15px 0 10px 0;
-          li {
-            display: inline-block;
-            margin: 0 3px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            span {
-              display: none;
+          .data {
+            * {
+              color: #fff;
+            }
+            .stars {
+              color: #fff;
             }
           }
         }
-        h1 {
-          font-size: 2.2rem;
-          color: #649ac0;
-          font-weight: bold;
+        figure {
+          transition: all 0.3s ease-out;
+          min-height: 150px;
+          height: 100%;
         }
-        h2 {
-          font-size: 1.8rem;
-          color: #649ac0;
-          font-weight: bold;
+        .flex {
+          align-items: normal;
+          height: 100%;
         }
-        h3 {
-          font-size: 1.3rem;
-          color: #649ac0;
-          font-weight: bold;
-          display: block;
-          padding: 3px 0;
-          strong {
+        .data {
+          padding: 30px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .stars {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-size: 1.8rem;
+            color: #649ac0;
+            font-weight: bold;
+            img {
+              width: 25px;
+            }
+          }
+
+          .colors {
+            margin: 15px 0 10px 0;
+            li {
+              display: inline-block;
+              margin: 0 3px;
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              span {
+                display: none;
+              }
+            }
+          }
+          h1 {
+            font-size: 2.2rem;
+            color: #649ac0;
+            font-weight: bold;
+          }
+          h2 {
+            font-size: 1.8rem;
+            color: #649ac0;
+            font-weight: bold;
+          }
+          h3 {
+            font-size: 1.3rem;
+            color: #649ac0;
+            font-weight: bold;
+            display: block;
+            padding: 3px 0;
+            strong {
+              font-size: 1.8rem;
+            }
+          }
+        }
+        .address {
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: #649ac0;
+          font-weight: bold;
+          img {
+            height: 20px;
+            width: 20px;
+            object-fit: contain;
+          }
+        }
+        .phone {
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          color: #649ac0;
+          font-weight: bold;
+          gap: 10px;
+          img {
+            height: 20px;
+            width: 20px;
+            object-fit: contain;
+          }
+        }
+        .email {
+          font-size: 14px;
+          display: flex;
+          color: #649ac0;
+          font-weight: bold;
+          align-items: center;
+          gap: 10px;
+          img {
+            height: 20px;
+            width: 20px;
+            object-fit: contain;
           }
         }
       }
-      .address {
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #649ac0;
-        font-weight: bold;
-        img {
-          height: 20px;
-          width: 20px;
-          object-fit: contain;
-        }
-      }
-      .phone {
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-        color: #649ac0;
-        font-weight: bold;
-        gap: 10px;
-        img {
-          height: 20px;
-          width: 20px;
-          object-fit: contain;
-        }
-      }
-      .email {
-        font-size: 14px;
-        display: flex;
-        color: #649ac0;
-        font-weight: bold;
-        align-items: center;
-        gap: 10px;
-        img {
-          height: 20px;
-          width: 20px;
-          object-fit: contain;
-        }
-      }
-      }
     }
   }
- 
+
   .images {
     h2 {
       margin: 90px 0 0px;
@@ -2467,8 +2461,6 @@
   width: 100%;
 }
 
-
-
 @media only screen and (max-width: 768px) {
   .venuesList-body footer {
     padding: 50px 0;
@@ -2507,7 +2499,6 @@
     min-height: 70vh;
   }
 }
-
 
 .internVenue-body .banner-internVenue h1,
 .internprovider-body .banner-internVenue h1 {
@@ -3378,7 +3369,7 @@
   display: flex;
   padding: 24px 20px 10px 15px;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .internVenue-body .grid-hotels li a .flex,
@@ -3426,7 +3417,6 @@
   font-size: 1.8rem;
   color: #fff;
 }
-
 
 .internVenue-body .images h2,
 .internprovider-body .images h2 {
@@ -3508,7 +3498,6 @@
     background: rgb(26, 26, 26);
     background: linear-gradient(0deg, #1a1a1a 20%, #212121 80%);
     position: relative;
-   
   }
 }
 
@@ -3882,7 +3871,6 @@
   transform: scale(1.2);
 }
 
-
 @media only screen and (max-width: 768px) {
   .thecity footer {
     padding: 50px 0;
@@ -4037,7 +4025,6 @@
   }
 }
 
-
 .internStorie-banner h1 {
   color: #fff;
   font-family: "Museosans-900";
@@ -4098,7 +4085,6 @@
     border-radius: 0;
   }
 }
-
 
 .internStorie main .gallery img {
   height: 100%;
@@ -4207,7 +4193,6 @@
   }
 }
 
-
 @media only screen and (max-width: 768px) {
   .internStorie footer {
     padding: 50px 0;
@@ -4215,7 +4200,6 @@
     height: auto;
   }
 }
-
 
 .bioseguridad main {
   min-height: 100vh;
@@ -6707,7 +6691,7 @@ small.recomendacion {
   margin: 0 auto;
 }
 
-.info-container .stars{
+.info-container .stars {
   font-family: "MuseoSans-900";
   font-size: 13px;
   display: flex;
@@ -6715,7 +6699,7 @@ small.recomendacion {
 
   align-items: center;
   color: #606060;
-  img{
+  img {
     width: 20px;
   }
 }

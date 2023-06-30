@@ -40,18 +40,23 @@ function setCategory(cattype) {
             '<b style="background:#' + data[i].field_color + ';"></b>';
         }
 
-        var strtemplate =
-          '<p class="filtercheck fw500" data-filter="' +
-          data[i].tid +
-          '">' +
-          data[i].name +
-          "" +
-          complement +
-          '<input type="checkbox" value="' +
-          data[i].tid +
-          '" name="' +
-          filterid +
-          '" /></p>';
+        let strtemplate;
+        if (filterid == "rangos_de_precio") {
+          strtemplate = `<p class="filtercheck fw900" data-filter="${
+            data[i].tid
+          }">${(function price() {
+            let text = "";
+            for (let index = 0; index < parseInt(data[i].name, 10); index++) {
+              text += "$";
+            }
+            return text;
+          })()}<input type="checkbox" value="${
+            data[i].tid
+          }" name="${filterid}" /></p>`;
+        } else {
+          strtemplate = `<p class="filtercheck fw500" data-filter="${data[i].tid}">${data[i].name} ${complement}<input type="checkbox" value="${data[i].tid}" name="${filterid}" /></p>`;
+        }
+
         itscontent.append(strtemplate);
       }
 
@@ -391,23 +396,48 @@ if (document.querySelector(".grid-hotels")) {
   relHotels();
 }
 
+function shuffle(array) {
+  let currentIndex = array.length,
+    randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+
+  return array;
+}
+
 function relHotels(type, zone, aforo) {
   let idSingleVenue = document.querySelector(".internVenue-body main").dataset
     .venueid;
   var containerGridVenues = document.querySelector(".grid-hotels");
   containerGridVenues.innerHTML = "";
   // Create URL to FETCH
-  var url = "get/getRestaurants.php?filter=1";
+  var url = "g/getRestaurants/?filter=1";
 
   // Fetch final URL
   fetch(url)
     .then((response) => response.json())
     .then((venues) => {
+      // Used like so
+      shuffle(venues);
+      console.log(venues);
       if (venues.length > 1) {
-        for (let index = 0; index < 4 && index < venues.length; index++) {
+        for (let index = 0; index < 6 && index < venues.length; index++) {
           const venue = venues[index];
           if (venue.nid != idSingleVenue) {
-            let venueUrl = `single-restaurant.php?hotelid=${venue.nid}`;
+            let venueUrl = `/${actualLang}/restaurantes/ver/${get_alias(
+              venue.title
+            )}-${venue.nid}`;
 
             var thumbnail = venue.field_img;
 
@@ -432,25 +462,11 @@ function relHotels(type, zone, aforo) {
                  <h1>
             ${venue.title}
             </h1>
-                    <div class="stars">
-                    ${(function fun() {
-                      if (venue.field_calificacion) {
-                        return "Calificación de otros turistas";
-                      }
-                    })()}
-                    
-                    ${(function fun() {
-                      let iteration = +venue.field_calificacion
-                        ? +venue.field_calificacion
-                        : 0;
-                      let element = `<img src="img/stars.svg" alt="stars"/>`;
-                      let string = "";
-                      for (let index = 0; index < iteration; index++) {
-                        string += element;
-                      }
-                      return string;
-                    })()}
-                    </div>
+                      <div class="address">
+                        <span> ${
+                          venue.field_foodzone_1 ? venue.field_foodzone_1 : ""
+                        } </span>
+                      </div>
                       <div class="address">
                         <img src="img/address.svg" alt="address" /><span> ${
                           venue.field_hadress ? venue.field_hadress : ""

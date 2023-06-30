@@ -4,6 +4,6 @@
  include "../includes/restaurants.php";  $mice = new Restaurants("es");
 
 $restaurants = $mice->getRestaurants(
-    "all"
+    "all","all","all","all","all"
 );
 echo json_encode($restaurants);
